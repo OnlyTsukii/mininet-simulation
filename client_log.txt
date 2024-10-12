@@ -1,0 +1,173 @@
+2024/10/08 16:39:29 Increased receive buffer size to 14336 kiB
+2024/10/08 16:39:29 Increased send buffer size to 14336 kiB
+2024/10/08 16:39:29 Setting DF for IPv4.
+2024/10/08 16:39:29 Activating reading of ECN bits for IPv4.
+2024/10/08 16:39:29 client Starting new connection to 10.0.0.3 (10.0.0.1:7777 -> 10.0.0.3:6666), source connection ID d3f486fe, destination connection ID 4eba61ce985988d744, version v1
+2024/10/08 16:39:29 client Bind connID d3f486fe to path 0
+2024/10/08 16:39:29 Adding connection ID d3f486fe.
+2024/10/08 16:39:29 client Not doing 0-RTT. Has sealer: false, has params: false
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 client -> Sending packet 0 (1280 bytes) for connection 4eba61ce985988d744, Initial
+2024/10/08 16:39:29 client 	Long Header{Type: Initial, DestConnectionID: 4eba61ce985988d744, SrcConnectionID: d3f486fe, Token: (empty), PacketNumber: 0, PacketNumberLen: 2, Length: 1257, Version: v1}
+2024/10/08 16:39:29 client 	-> &wire.CryptoFrame{Offset: 0, Data length: 275, Offset + Data length: 275}
+2024/10/08 16:39:29 client Path 0 has started
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection d3f486fe
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client Parsed a coalesced packet. Part 1: 473 bytes. Remaining: 807 bytes.
+2024/10/08 16:39:29 client <- Reading packet 0 (473 bytes) for connection d3f486fe, Initial
+2024/10/08 16:39:29 client 	Long Header{Type: Initial, DestConnectionID: d3f486fe, SrcConnectionID: e062dc33, Token: (empty), PacketNumber: 0, PacketNumberLen: 2, Length: 455, Version: v1}
+2024/10/08 16:39:29 client Received first packet. Switching destination connection ID to: e062dc33
+2024/10/08 16:39:29 client 	<- &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/08 16:39:29 client 	newly acked packets (1): [0]
+2024/10/08 16:39:29 client 	updated RTT for path 0: 3.674438ms (σ: 1.837219ms), send time: 2024-10-08 16:39:29.774430484 +0800 CST m=+0.001202528, receive time: 2024-10-08 16:39:29.778104912 +0800 CST m=+0.004876966
+2024/10/08 16:39:29 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 90, Offset + Data length: 90}
+2024/10/08 16:39:29 client Installed Handshake Write keys (using TLS_AES_128_GCM_SHA256)
+2024/10/08 16:39:29 client Installed Handshake Read keys (using TLS_AES_128_GCM_SHA256)
+2024/10/08 16:39:29 client Parsed a coalesced packet. Part 2: 736 bytes. Remaining: 71 bytes.
+2024/10/08 16:39:29 client <- Reading packet 0 (736 bytes) for connection d3f486fe, Handshake
+2024/10/08 16:39:29 client 	Long Header{Type: Handshake, DestConnectionID: d3f486fe, SrcConnectionID: e062dc33, PacketNumber: 0, PacketNumberLen: 2, Length: 719, Version: v1}
+2024/10/08 16:39:29 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 697, Offset + Data length: 697}
+2024/10/08 16:39:29 client Installed 1-RTT Write keys (using TLS_AES_128_GCM_SHA256)
+2024/10/08 16:39:29 client Installed 1-RTT Read keys (using TLS_AES_128_GCM_SHA256)
+2024/10/08 16:39:29 client Processed Transport Parameters: &wire.TransportParameters{OriginalDestinationConnectionID: 4eba61ce985988d744, InitialSourceConnectionID: e062dc33, InitialMaxStreamDataBidiLocal: 524288, InitialMaxStreamDataBidiRemote: 524288, InitialMaxStreamDataUni: 524288, InitialMaxData: 786432, MaxBidiStreamNum: 100, MaxUniStreamNum: 100, MaxIdleTimeout: 30s, AckDelayExponent: 3, MaxAckDelay: 26ms, ActiveConnectionIDLimit: 12, MaxInitialPathID: 3, StatelessResetToken: 0x31bbcc6f07b6e6ef0e59a2cc7ab65328, MaxDatagramFrameSize: 16383}
+2024/10/08 16:39:29 Adding connection ID 0f5a7d9b.
+2024/10/08 16:39:29 Adding connection ID a02c84f2.
+2024/10/08 16:39:29 client <- Reading packet 0 (71 bytes) for connection d3f486fe, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: d3f486fe, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.NewConnectionIDFrame{SequenceNumber: 2, RetirePriorTo: 0, ConnectionID: 2453d999, StatelessResetToken: 0xc6371b940351847c42a24af727ada04f}
+2024/10/08 16:39:29 client 	<- &wire.NewConnectionIDFrame{SequenceNumber: 1, RetirePriorTo: 0, ConnectionID: 5127ad97, StatelessResetToken: 0xa0bfe980a2ab9294abf9b6d322621e22}
+2024/10/08 16:39:29 client 	Queueing ACK because the first packet should be acknowledged.
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.674438ms
+2024/10/08 16:39:29 client -> Sending coalesced packet (2 parts, 1280 bytes) for connection 4eba61ce985988d744
+2024/10/08 16:39:29 client 	Long Header{Type: Initial, DestConnectionID: 5127ad97, SrcConnectionID: d3f486fe, Token: (empty), PacketNumber: 1, PacketNumberLen: 2, Length: 1115, Version: v1}
+2024/10/08 16:39:29 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/08 16:39:29 client 	Long Header{Type: Handshake, DestConnectionID: 5127ad97, SrcConnectionID: d3f486fe, PacketNumber: 0, PacketNumberLen: 2, Length: 57, Version: v1}
+2024/10/08 16:39:29 client 	-> &wire.CryptoFrame{Offset: 0, Data length: 36, Offset + Data length: 36}
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 5127ad97, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.NewConnectionIDFrame{SequenceNumber: 2, RetirePriorTo: 0, ConnectionID: a02c84f2, StatelessResetToken: 0x6787aad37b9f4ee0650f1f4c8b4dfc58}
+2024/10/08 16:39:29 client 	-> &wire.RetireConnectionIDFrame{SequenceNumber: 0}
+2024/10/08 16:39:29 client 	-> &wire.NewConnectionIDFrame{SequenceNumber: 1, RetirePriorTo: 0, ConnectionID: 0f5a7d9b, StatelessResetToken: 0xefba0ccfc7fcea8dc9a8dc217ea3fa8c}
+2024/10/08 16:39:29 client Dropping Initial keys.
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.674438ms
+2024/10/08 16:39:29 client -> Sending packet 1 (40 bytes) for connection 4eba61ce985988d744, Handshake
+2024/10/08 16:39:29 client 	Long Header{Type: Handshake, DestConnectionID: 5127ad97, SrcConnectionID: d3f486fe, PacketNumber: 1, PacketNumberLen: 2, Length: 23, Version: v1}
+2024/10/08 16:39:29 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/08 16:39:29 Adding connection ID 12210d87.
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.674438ms
+2024/10/08 16:39:29 client -> Sending packet 1 (54 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 5127ad97, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 664.135µs}
+2024/10/08 16:39:29 client 	-> &wire.MpNewConnectionIDFrame{PathID: 1, SequenceNumber: 3, RetirePriorTo: 0, ConnectionID: 12210d87, StatelessResetToken: 0xc137a73f37ef26ec3bbd449a87d41300}
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 0f5a7d9b
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 1 (276 bytes) for connection 0f5a7d9b, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 0f5a7d9b, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.MpAckFrame{PathID: 0, LargestAcked: 1, LowestAcked: 0, DelayTime: 240µs, ECT0: 1, ECT1: 0, CE: 0}
+2024/10/08 16:39:29 client Peer doesn't await address validation any longer.
+2024/10/08 16:39:29 client 	newly acked packets (2): [0 1]
+2024/10/08 16:39:29 client 	updated RTT for path 0: 3.33ms (σ: 2.065ms), send time: 2024-10-08 16:39:29.778756529 +0800 CST m=+0.005528565, receive time: 2024-10-08 16:39:29.779680419 +0800 CST m=+0.006452454
+2024/10/08 16:39:29 client ECN capability confirmed.
+2024/10/08 16:39:29 client Canceling loss detection timer. No packets in flight.
+2024/10/08 16:39:29 client Path 0 set handshake confirmed
+2024/10/08 16:39:29 client Dropping Handshake keys.
+2024/10/08 16:39:29 client 	<- &wire.MpNewConnectionIDFrame{PathID: 1, SequenceNumber: 3, RetirePriorTo: 0, ConnectionID: 88ea47b5, StatelessResetToken: 0x28ccd480be8f5843fa251f802cfccf1a}
+2024/10/08 16:39:29 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 135, Offset + Data length: 135}
+2024/10/08 16:39:29 client 	<- &wire.NewTokenFrame{Token: 0xa515eca821c0ea7f4c768ebd47d897ec7ea151389dcc960a9fb6d7588d8e3d0c43874df5d79fcd47ea00a6829a3d79236c6d12a2839733d77c5a21bb5e74a70ea18850e8ba69d6da09fd}
+2024/10/08 16:39:29 client 	<- &wire.HandshakeDoneFrame{}
+2024/10/08 16:39:29 client 	<- &wire.RetireConnectionIDFrame{SequenceNumber: 0}
+2024/10/08 16:39:29 Retiring connection ID d3f486fe in 5s.
+2024/10/08 16:39:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/08 16:39:29 client 	Ignoring all packets below 1.
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 Transport handled an EventCreateRawPath event
+2024/10/08 16:39:29 Increased receive buffer size to 14336 kiB
+2024/10/08 16:39:29 Increased send buffer size to 14336 kiB
+2024/10/08 16:39:29 Setting DF for IPv4.
+2024/10/08 16:39:29 Activating reading of ECN bits for IPv4.
+2024/10/08 16:39:29 client Create a new path, pathID 1, localAddr 10.0.0.2:8888, remoteAddr 10.0.0.3:6666
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 client Path 1 has started
+2024/10/08 16:39:29 client Path 1 set handshake confirmed
+2024/10/08 16:39:29 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 client -> Sending packet 0 (1366 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 88ea47b5, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.PingFrame{}
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 0f5a7d9b
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 2 (1366 bytes) for connection 0f5a7d9b, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 0f5a7d9b, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.PingFrame{}
+2024/10/08 16:39:29 client 	Queueing ACK because packet 2 packets were received after the last ACK (using initial threshold: 2).
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 12210d87
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 0 (1366 bytes) for connection 12210d87, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 12210d87, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.PingFrame{}
+2024/10/08 16:39:29 client 	Queueing ACK because the first packet should be acknowledged.
+2024/10/08 16:39:29 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 client -> Sending packet 1 (42 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 88ea47b5, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.MpAckFrame{PathID: 0, LargestAcked: 2, LowestAcked: 1, DelayTime: 758.529µs, ECT0: 2, ECT1: 0, CE: 0}
+2024/10/08 16:39:29 client 	-> &wire.PathChallengeFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/08 16:39:29 client -> Sending packet 2 (32 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 88ea47b5, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.MpAckFrame{PathID: 1, LargestAcked: 0, LowestAcked: 0, DelayTime: 148.511µs, ECT0: 1, ECT1: 0, CE: 0}
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 12210d87
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 12210d87
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 1 (41 bytes) for connection 12210d87, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 12210d87, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.PathChallengeFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/08 16:39:29 client 	<- &wire.PathResponseFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/08 16:39:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 2 (32 bytes) for connection 12210d87, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 12210d87, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.MpAckFrame{PathID: 1, LargestAcked: 2, LowestAcked: 0, DelayTime: 144µs, ECT0: 3, ECT1: 0, CE: 0}
+2024/10/08 16:39:29 client Peer doesn't await address validation any longer.
+2024/10/08 16:39:29 client 	newly acked packets (2): [0 1]
+2024/10/08 16:39:29 client ECN capability confirmed.
+2024/10/08 16:39:29 client Canceling loss detection timer. No packets in flight.
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 client -> Sending packet 3 (1409 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 88ea47b5, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.PingFrame{}
+2024/10/08 16:39:29 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:29 client -> Sending packet 4 (32 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 88ea47b5, PacketNumber: 4, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.PathResponseFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/08 16:39:29 client Select path 0 by ROUND_ROBIN, rtt 3.33ms
+2024/10/08 16:39:29 client -> Sending packet 2 (1366 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 5127ad97, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	-> &wire.PingFrame{}
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 0f5a7d9b
+2024/10/08 16:39:29 received a packet from 10.0.0.3:6666 and handle it in connection 12210d87
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 3 (1409 bytes) for connection 0f5a7d9b, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 0f5a7d9b, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.PingFrame{}
+2024/10/08 16:39:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/08 16:39:29 client Received a packet from 10.0.0.3:6666
+2024/10/08 16:39:29 client <- Reading packet 3 (1409 bytes) for connection 12210d87, 1-RTT
+2024/10/08 16:39:29 client 	Short Header{DestConnectionID: 12210d87, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:29 client 	<- &wire.PingFrame{}
+2024/10/08 16:39:29 client 	Queueing ACK because packet 2 packets were received after the last ACK (using initial threshold: 2).
+2024/10/08 16:39:29 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/08 16:39:31 Tracking 4 connection IDs and 1 reset tokens.
+2024/10/08 16:39:33 Tracking 4 connection IDs and 1 reset tokens.
+2024/10/08 16:39:34 Removing connection ID d3f486fe after it has been retired.
+2024/10/08 16:39:35 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/08 16:39:37 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/08 16:39:39 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/08 16:39:39 client Closing connection with error: Application error 0x0 (local)
+2024/10/08 16:39:39 client Path 0 has closed
+2024/10/08 16:39:39 client Path 1 has closed
+2024/10/08 16:39:39 client -> Sending packet 3 (26 bytes) for connection 4eba61ce985988d744, 1-RTT (ECN: ECT(0))
+2024/10/08 16:39:39 client 	Short Header{DestConnectionID: 5127ad97, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/08 16:39:39 client 	-> &wire.ConnectionCloseFrame{IsApplicationError:true, ErrorCode:0x0, FrameType:0x0, ReasonPhrase:""}
+2024/10/08 16:39:39 Replacing connection for connection IDs [0f5a7d9b a02c84f2 12210d87] with a closed connection.
+2024/10/08 16:39:39 client Connection 4eba61ce985988d744 closed.

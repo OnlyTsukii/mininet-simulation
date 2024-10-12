@@ -1,0 +1,1176 @@
+2024/10/12 12:52:27 Increased receive buffer size to 14336 kiB
+2024/10/12 12:52:27 Increased send buffer size to 14336 kiB
+2024/10/12 12:52:27 Setting DF for IPv4.
+2024/10/12 12:52:27 Activating reading of ECN bits for IPv4.
+2024/10/12 12:52:27 client Starting new connection to 10.0.0.1 (192.168.1.100:6666 -> 10.0.0.1:6666), source connection ID 7fc7de10, destination connection ID 4625f10da3c07b684efcef, version v1
+2024/10/12 12:52:27 client Bind connID 7fc7de10 to path 0
+2024/10/12 12:52:27 Adding connection ID 7fc7de10.
+2024/10/12 12:52:27 client Not doing 0-RTT. Has sealer: false, has params: false
+2024/10/12 12:52:27 client Path 0 has started
+2024/10/12 12:52:27 client -> Sending packet 0 (1280 bytes) for connection 4625f10da3c07b684efcef, Initial
+2024/10/12 12:52:27 client 	Long Header{Type: Initial, DestConnectionID: 4625f10da3c07b684efcef, SrcConnectionID: 7fc7de10, Token: (empty), PacketNumber: 0, PacketNumberLen: 2, Length: 1255, Version: v1}
+2024/10/12 12:52:27 client 	-> &wire.CryptoFrame{Offset: 0, Data length: 278, Offset + Data length: 278}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 0s
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 7fc7de10
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client Parsed a coalesced packet. Part 1: 465 bytes. Remaining: 815 bytes.
+2024/10/12 12:52:27 client <- Reading packet 0 (465 bytes) for connection 7fc7de10, Initial
+2024/10/12 12:52:27 client 	Long Header{Type: Initial, DestConnectionID: 7fc7de10, SrcConnectionID: 3a52d00f, Token: (empty), PacketNumber: 0, PacketNumberLen: 2, Length: 447, Version: v1}
+2024/10/12 12:52:27 client Received first packet. Switching destination connection ID to: 3a52d00f
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/12 12:52:27 client 	newly acked packets (1): [0]
+2024/10/12 12:52:27 client 	updated RTT for path 0: 13.862257ms (σ: 6.931128ms), send time: 2024-10-12 12:52:27.008729335 +0800 CST m=+0.002332145, receive time: 2024-10-12 12:52:27.022591691 +0800 CST m=+0.016194402
+2024/10/12 12:52:27 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 90, Offset + Data length: 90}
+2024/10/12 12:52:27 client Installed Handshake Write keys (using TLS_AES_128_GCM_SHA256)
+2024/10/12 12:52:27 client Installed Handshake Read keys (using TLS_AES_128_GCM_SHA256)
+2024/10/12 12:52:27 client Parsed a coalesced packet. Part 2: 744 bytes. Remaining: 71 bytes.
+2024/10/12 12:52:27 client <- Reading packet 0 (744 bytes) for connection 7fc7de10, Handshake
+2024/10/12 12:52:27 client 	Long Header{Type: Handshake, DestConnectionID: 7fc7de10, SrcConnectionID: 3a52d00f, PacketNumber: 0, PacketNumberLen: 2, Length: 727, Version: v1}
+2024/10/12 12:52:27 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 705, Offset + Data length: 705}
+2024/10/12 12:52:27 client Installed 1-RTT Write keys (using TLS_AES_128_GCM_SHA256)
+2024/10/12 12:52:27 client Installed 1-RTT Read keys (using TLS_AES_128_GCM_SHA256)
+2024/10/12 12:52:27 client Processed Transport Parameters: &wire.TransportParameters{OriginalDestinationConnectionID: 4625f10da3c07b684efcef, InitialSourceConnectionID: 3a52d00f, InitialMaxStreamDataBidiLocal: 524288, InitialMaxStreamDataBidiRemote: 524288, InitialMaxStreamDataUni: 524288, InitialMaxData: 786432, MaxBidiStreamNum: 100, MaxUniStreamNum: 100, MaxIdleTimeout: 30s, AckDelayExponent: 3, MaxAckDelay: 26ms, ActiveConnectionIDLimit: 12, MaxInitialPathID: 3, StatelessResetToken: 0xff8dcbe8faa61f3969acf0237e3dafeb, MaxDatagramFrameSize: 16383}
+2024/10/12 12:52:27 Adding connection ID 5cdc9281.
+2024/10/12 12:52:27 Adding connection ID e83f8f23.
+2024/10/12 12:52:27 client <- Reading packet 0 (71 bytes) for connection 7fc7de10, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 7fc7de10, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.NewConnectionIDFrame{SequenceNumber: 1, RetirePriorTo: 0, ConnectionID: e4b5db28, StatelessResetToken: 0x9f86723d3d7f451223a945d0a6907de5}
+2024/10/12 12:52:27 client 	<- &wire.NewConnectionIDFrame{SequenceNumber: 2, RetirePriorTo: 0, ConnectionID: b29ef8ee, StatelessResetToken: 0x46deafbb77ec3af611e6fffa11447fb8}
+2024/10/12 12:52:27 client 	Queueing ACK because the first packet should be acknowledged.
+2024/10/12 12:52:27 client -> Sending coalesced packet (2 parts, 1280 bytes) for connection 4625f10da3c07b684efcef
+2024/10/12 12:52:27 client 	Long Header{Type: Initial, DestConnectionID: e4b5db28, SrcConnectionID: 7fc7de10, Token: (empty), PacketNumber: 1, PacketNumberLen: 2, Length: 1115, Version: v1}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/12 12:52:27 client 	Long Header{Type: Handshake, DestConnectionID: e4b5db28, SrcConnectionID: 7fc7de10, PacketNumber: 0, PacketNumberLen: 2, Length: 57, Version: v1}
+2024/10/12 12:52:27 client 	-> &wire.CryptoFrame{Offset: 0, Data length: 36, Offset + Data length: 36}
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.RetireConnectionIDFrame{SequenceNumber: 0}
+2024/10/12 12:52:27 client 	-> &wire.NewConnectionIDFrame{SequenceNumber: 1, RetirePriorTo: 0, ConnectionID: 5cdc9281, StatelessResetToken: 0xc9f5f7e3f5e5771901ad0a55ee6991d9}
+2024/10/12 12:52:27 client 	-> &wire.NewConnectionIDFrame{SequenceNumber: 2, RetirePriorTo: 0, ConnectionID: e83f8f23, StatelessResetToken: 0xa2fd52891036a4ddcd289298692e549b}
+2024/10/12 12:52:27 client Dropping Initial keys.
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 13.862257ms
+2024/10/12 12:52:27 Adding connection ID 17d7dae8.
+2024/10/12 12:52:27 client -> Sending packet 1 (40 bytes) for connection 4625f10da3c07b684efcef, Handshake
+2024/10/12 12:52:27 client 	Long Header{Type: Handshake, DestConnectionID: e4b5db28, SrcConnectionID: 7fc7de10, PacketNumber: 1, PacketNumberLen: 2, Length: 23, Version: v1}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 0s}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 13.862257ms
+2024/10/12 12:52:27 client -> Sending packet 1 (54 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 1.413287ms}
+2024/10/12 12:52:27 client 	-> &wire.MpNewConnectionIDFrame{PathID: 1, SequenceNumber: 3, RetirePriorTo: 0, ConnectionID: 17d7dae8, StatelessResetToken: 0x75f438f704dfd500173067603b631c7c}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 13.862257ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 1 (276 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 1, LowestAcked: 0, DelayTime: 1ms, ECT0: 1, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Peer doesn't await address validation any longer.
+2024/10/12 12:52:27 client 	newly acked packets (2): [0 1]
+2024/10/12 12:52:27 client 	updated RTT for path 0: 12.647ms (σ: 7.628ms), send time: 2024-10-12 12:52:27.023995979 +0800 CST m=+0.017598689, receive time: 2024-10-12 12:52:27.028137934 +0800 CST m=+0.021740845
+2024/10/12 12:52:27 client ECN capability confirmed.
+2024/10/12 12:52:27 client Canceling loss detection timer. No packets in flight.
+2024/10/12 12:52:27 client Path 0 set handshake confirmed
+2024/10/12 12:52:27 client Dropping Handshake keys.
+2024/10/12 12:52:27 client 	<- &wire.MpNewConnectionIDFrame{PathID: 1, SequenceNumber: 3, RetirePriorTo: 0, ConnectionID: e8af2e90, StatelessResetToken: 0x1e46b2b18689a0de9fb0e6958c9b4b35}
+2024/10/12 12:52:27 client 	<- &wire.CryptoFrame{Offset: 0, Data length: 135, Offset + Data length: 135}
+2024/10/12 12:52:27 client 	<- &wire.HandshakeDoneFrame{}
+2024/10/12 12:52:27 client 	<- &wire.NewTokenFrame{Token: 0x24ba36d342e26c1b6c7c2931eb5c9d68c6ce78dd01623fa9c7beae87b5f9149035d8b57dfea5c1896478f2290a7391cfb7339350990bbe814f46bf19676ab468821b934f285c49c4de79}
+2024/10/12 12:52:27 client 	<- &wire.RetireConnectionIDFrame{SequenceNumber: 0}
+2024/10/12 12:52:27 Retiring connection ID 7fc7de10 in 5s.
+2024/10/12 12:52:27 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:27 client 	Ignoring all packets below 1.
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 12.647ms
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 12.647ms
+2024/10/12 12:52:27 Transport handled an EventCreateRawPath event
+2024/10/12 12:52:27 Increased receive buffer size to 14336 kiB
+2024/10/12 12:52:27 Increased send buffer size to 14336 kiB
+2024/10/12 12:52:27 Setting DF for IPv4.
+2024/10/12 12:52:27 Activating reading of ECN bits for IPv4.
+2024/10/12 12:52:27 client Create a new path, pathID 1, localAddr 192.168.2.100:6666, remoteAddr 10.0.0.1:6666
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 12.647ms
+2024/10/12 12:52:27 client Path 1 has started
+2024/10/12 12:52:27 client Path 1 set handshake confirmed
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 2 (1366 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:27 client 	Queueing ACK because packet 2 packets were received after the last ACK (using initial threshold: 2).
+2024/10/12 12:52:27 client -> Sending packet 0 (1366 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/12 12:52:27 client -> Sending packet 2 (32 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 2, LowestAcked: 1, DelayTime: 515.232µs, ECT0: 2, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 12.647ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 3 (1409 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:27 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:27 client -> Sending packet 3 (1366 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:27 client -> Sending packet 1 (32 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.PathChallengeFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 0s
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 0 (1366 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 0, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:27 client 	Queueing ACK because the first packet should be acknowledged.
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 12.647ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 1 (32 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 1, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 0, LowestAcked: 0, DelayTime: 4.112ms, ECT0: 1, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Peer doesn't await address validation any longer.
+2024/10/12 12:52:27 client 	newly acked packets (1): [0]
+2024/10/12 12:52:27 client 	updated RTT for path 1: 217.716562ms (σ: 108.858281ms), send time: 2024-10-12 12:52:27.065175324 +0800 CST m=+0.058778434, receive time: 2024-10-12 12:52:27.282892685 +0800 CST m=+0.276494996
+2024/10/12 12:52:27 client ECN capability confirmed.
+2024/10/12 12:52:27 client -> Sending packet 2 (31 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 1, LowestAcked: 0, DelayTime: 267.116µs, ECT0: 2, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 217.716562ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 4 (32 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 4, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 3, LowestAcked: 2, DelayTime: 100.04ms, ECT0: 3, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client 	newly acked packets (1): [3]
+2024/10/12 12:52:27 client 	updated RTT for path 0: 20.662ms (σ: 21.752ms), send time: 2024-10-12 12:52:27.278134791 +0800 CST m=+0.271737501, receive time: 2024-10-12 12:52:27.380909446 +0800 CST m=+0.374512256
+2024/10/12 12:52:27 client Sending ACK because the ACK timer expired.
+2024/10/12 12:52:27 client -> Sending packet 4 (31 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 4, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 4, LowestAcked: 1, DelayTime: 257.816µs, ECT0: 4, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 20.662ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 2 (50 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 2, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 1, LowestAcked: 0, DelayTime: 688µs, ECT0: 2, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client 	newly acked packets (1): [1]
+2024/10/12 12:52:27 client 	updated RTT for path 1: 203.42ms (σ: 110.233ms), send time: 2024-10-12 12:52:27.278134791 +0800 CST m=+0.271737501, receive time: 2024-10-12 12:52:27.381490282 +0800 CST m=+0.375092792
+2024/10/12 12:52:27 client Canceling loss detection timer. No packets in flight.
+2024/10/12 12:52:27 client 	<- &wire.PathChallengeFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/12 12:52:27 client 	<- &wire.PathResponseFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/12 12:52:27 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:27 client -> Sending packet 5 (1409 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 5, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:27 client -> Sending packet 3 (40 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 2, LowestAcked: 0, DelayTime: 401.425µs, ECT0: 3, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client 	-> &wire.PathResponseFrame{Data:[8]uint8{0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}}
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 20.662ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 5 (1430 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 5, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:27 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 3 (1409 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 3, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:27 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 20.662ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 6 (32 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 6, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 5, LowestAcked: 2, DelayTime: 99.12ms, ECT0: 5, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client 	newly acked packets (1): [5]
+2024/10/12 12:52:27 client 	updated RTT for path 0: 27.525ms (σ: 30.041ms), send time: 2024-10-12 12:52:27.381801301 +0800 CST m=+0.375403812, receive time: 2024-10-12 12:52:27.483374482 +0800 CST m=+0.476977192
+2024/10/12 12:52:27 client Sending ACK because the ACK timer expired.
+2024/10/12 12:52:27 client -> Sending packet 4 (32 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 4, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.AckFrame{LargestAcked: 3, LowestAcked: 0, DelayTime: 99.032323ms, ECT0: 4, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:27 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:27 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:27 client <- Reading packet 4 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 4, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	<- &wire.AckFrame{LargestAcked: 4, LowestAcked: 2, DelayTime: 416µs, ECT0: 5, ECT1: 0, CE: 0}
+2024/10/12 12:52:27 client 	newly acked packets (1): [3]
+2024/10/12 12:52:27 client Canceling loss detection timer. No packets in flight.
+2024/10/12 12:52:27 client 	Ignoring all packets below 3.
+2024/10/12 12:52:27 client -> Sending packet 6 (1430 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:27 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 6, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:27 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:27 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 Tracking 4 connection IDs and 1 reset tokens.
+2024/10/12 12:52:29 client -> Sending packet 5 (1409 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 5, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 7 (1060 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 7, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.AckFrame{LargestAcked: 6, LowestAcked: 1, DelayTime: 1.541722727s, ECT0: 6, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 0, Data length: 1024, Offset + Data length: 1024}
+2024/10/12 12:52:29 client -> Sending packet 8 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 8, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 1024, Data length: 1024, Offset + Data length: 2048}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client -> Sending packet 6 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 6, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 2048, Data length: 1024, Offset + Data length: 3072}
+2024/10/12 12:52:29 client -> Sending packet 7 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 7, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 3072, Data length: 1024, Offset + Data length: 4096}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client -> Sending packet 8 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 8, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 4096, Data length: 1024, Offset + Data length: 5120}
+2024/10/12 12:52:29 client -> Sending packet 9 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 9, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 5120, Data length: 1024, Offset + Data length: 6144}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client -> Sending packet 10 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 10, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 6144, Data length: 1024, Offset + Data length: 7168}
+2024/10/12 12:52:29 client -> Sending packet 11 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 11, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 7168, Data length: 1024, Offset + Data length: 8192}
+2024/10/12 12:52:29 client -> Sending packet 12 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 12, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 8192, Data length: 1024, Offset + Data length: 9216}
+2024/10/12 12:52:29 client -> Sending packet 13 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 13, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 9216, Data length: 1024, Offset + Data length: 10240}
+2024/10/12 12:52:29 client -> Sending packet 14 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 14, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 10240, Data length: 1024, Offset + Data length: 11264}
+2024/10/12 12:52:29 client -> Sending packet 15 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 15, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 11264, Data length: 1024, Offset + Data length: 12288}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client -> Sending packet 16 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 16, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 12288, Data length: 1024, Offset + Data length: 13312}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 9 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 9, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 13312, Data length: 1024, Offset + Data length: 14336}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 10 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 10, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 14336, Data length: 1024, Offset + Data length: 15360}
+2024/10/12 12:52:29 client -> Sending packet 11 (1051 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 11, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 15360, Data length: 1024, Offset + Data length: 16384}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 12 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 12, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 16384, Data length: 1024, Offset + Data length: 17408}
+2024/10/12 12:52:29 client -> Sending packet 13 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 13, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 17408, Data length: 1024, Offset + Data length: 18432}
+2024/10/12 12:52:29 client -> Sending packet 14 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 14, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 18432, Data length: 1024, Offset + Data length: 19456}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 5 (1430 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 5, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:29 client -> Sending packet 15 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 15, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 19456, Data length: 1024, Offset + Data length: 20480}
+2024/10/12 12:52:29 client -> Sending packet 16 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 16, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 20480, Data length: 1024, Offset + Data length: 21504}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 client -> Sending packet 17 (1061 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 17, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.AckFrame{LargestAcked: 5, LowestAcked: 3, DelayTime: 442.827µs, ECT0: 6, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 21504, Data length: 1024, Offset + Data length: 22528}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 17 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 17, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 22528, Data length: 1024, Offset + Data length: 23552}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 27.525ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 7 (1441 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 7, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 8 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 8, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 8, LowestAcked: 2, DelayTime: 144µs, ECT0: 8, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [6 7 8]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 24.546ms (σ: 28.487ms), send time: 2024-10-12 12:52:29.025085608 +0800 CST m=+2.018688319, receive time: 2024-10-12 12:52:29.028781736 +0800 CST m=+2.022384346
+2024/10/12 12:52:29 client 	Ignoring all packets below 7.
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 18 (1441 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 18, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 24.546ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 9 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 9, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 10, LowestAcked: 2, DelayTime: 136µs, ECT0: 10, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [9 10]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 21.745ms (σ: 26.967ms), send time: 2024-10-12 12:52:29.026769212 +0800 CST m=+2.020372022, receive time: 2024-10-12 12:52:29.028907444 +0800 CST m=+2.022510254
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 10 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 10, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 12, LowestAcked: 2, DelayTime: 200µs, ECT0: 12, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [11 12]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 19.335ms (σ: 25.043ms), send time: 2024-10-12 12:52:29.027038729 +0800 CST m=+2.020641439, receive time: 2024-10-12 12:52:29.029711394 +0800 CST m=+2.023314304
+2024/10/12 12:52:29 client -> Sending packet 19 (1061 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 19, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.AckFrame{LargestAcked: 10, LowestAcked: 7, DelayTime: 263.116µs, ECT0: 10, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 23552, Data length: 1024, Offset + Data length: 24576}
+2024/10/12 12:52:29 client -> Sending packet 20 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 20, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 24576, Data length: 1024, Offset + Data length: 25600}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 19.335ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 21 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 21, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 25600, Data length: 1024, Offset + Data length: 26624}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 22 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 22, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 26624, Data length: 1024, Offset + Data length: 27648}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 19.335ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 11 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 11, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 14, LowestAcked: 2, DelayTime: 160µs, ECT0: 14, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [13 14]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 17.331ms (σ: 22.788ms), send time: 2024-10-12 12:52:29.027038729 +0800 CST m=+2.020641439, receive time: 2024-10-12 12:52:29.030506943 +0800 CST m=+2.024109653
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 23 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 23, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 27648, Data length: 1024, Offset + Data length: 28672}
+2024/10/12 12:52:29 client -> Sending packet 24 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 24, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 28672, Data length: 1024, Offset + Data length: 29696}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 17.331ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 25 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 25, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 29696, Data length: 1024, Offset + Data length: 30720}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 17.331ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 12 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 12, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 17, LowestAcked: 2, DelayTime: 176µs, ECT0: 17, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [15 16 17]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 15.443ms (σ: 20.865ms), send time: 2024-10-12 12:52:29.028594425 +0800 CST m=+2.022197035, receive time: 2024-10-12 12:52:29.031003773 +0800 CST m=+2.024606484
+2024/10/12 12:52:29 client -> Sending packet 26 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 26, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 30720, Data length: 1024, Offset + Data length: 31744}
+2024/10/12 12:52:29 client -> Sending packet 27 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 27, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 31744, Data length: 1024, Offset + Data length: 32768}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 15.443ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 13 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 13, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 19, LowestAcked: 2, DelayTime: 176µs, ECT0: 19, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [18 19]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 13.792ms (σ: 18.95ms), send time: 2024-10-12 12:52:29.029963509 +0800 CST m=+2.023566420, receive time: 2024-10-12 12:52:29.032200147 +0800 CST m=+2.025802857
+2024/10/12 12:52:29 client 	Ignoring all packets below 11.
+2024/10/12 12:52:29 client -> Sending packet 28 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 28, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 32768, Data length: 1024, Offset + Data length: 33792}
+2024/10/12 12:52:29 client -> Sending packet 29 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 29, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 33792, Data length: 1024, Offset + Data length: 34816}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 13.792ms
+2024/10/12 12:52:29 client -> Sending packet 18 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 18, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 34816, Data length: 1024, Offset + Data length: 35840}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 30 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 30, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 35840, Data length: 1024, Offset + Data length: 36864}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 13.792ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 31 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 31, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 36864, Data length: 1024, Offset + Data length: 37888}
+2024/10/12 12:52:29 client -> Sending packet 32 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 32, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 37888, Data length: 1024, Offset + Data length: 38912}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 13.792ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client <- Reading packet 14 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 14, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 21, LowestAcked: 2, DelayTime: 240µs, ECT0: 21, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [20 21]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 12.384ms (σ: 17.026ms), send time: 2024-10-12 12:52:29.030435738 +0800 CST m=+2.024038449, receive time: 2024-10-12 12:52:29.033209809 +0800 CST m=+2.026812820
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 15 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 15, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 23, LowestAcked: 2, DelayTime: 160µs, ECT0: 23, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [22 23]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 11.133ms (σ: 15.27ms), send time: 2024-10-12 12:52:29.030734756 +0800 CST m=+2.024337367, receive time: 2024-10-12 12:52:29.033273513 +0800 CST m=+2.026876324
+2024/10/12 12:52:29 client -> Sending packet 33 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 33, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 38912, Data length: 1024, Offset + Data length: 39936}
+2024/10/12 12:52:29 client -> Sending packet 34 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 34, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 39936, Data length: 1024, Offset + Data length: 40960}
+2024/10/12 12:52:29 client -> Sending packet 35 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 35, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 40960, Data length: 1024, Offset + Data length: 41984}
+2024/10/12 12:52:29 client -> Sending packet 36 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 36, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 41984, Data length: 1024, Offset + Data length: 43008}
+2024/10/12 12:52:29 client -> Sending packet 37 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 37, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 43008, Data length: 1024, Offset + Data length: 44032}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 11.133ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 38 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 38, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 44032, Data length: 1024, Offset + Data length: 45056}
+2024/10/12 12:52:29 client -> Sending packet 39 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 39, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 45056, Data length: 1024, Offset + Data length: 46080}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 11.133ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 16 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 16, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 25, LowestAcked: 2, DelayTime: 144µs, ECT0: 25, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [24 25]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.092ms (σ: 13.533ms), send time: 2024-10-12 12:52:29.031013774 +0800 CST m=+2.024617484, receive time: 2024-10-12 12:52:29.033966256 +0800 CST m=+2.027569066
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 40 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 40, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 46080, Data length: 1024, Offset + Data length: 47104}
+2024/10/12 12:52:29 client -> Sending packet 41 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 41, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 47104, Data length: 1024, Offset + Data length: 48128}
+2024/10/12 12:52:29 client -> Sending packet 42 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 42, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 48128, Data length: 1024, Offset + Data length: 49152}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.092ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 43 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 43, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 49152, Data length: 1024, Offset + Data length: 50176}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.092ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 44 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 44, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 50176, Data length: 1024, Offset + Data length: 51200}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.092ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 17 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 17, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 28, LowestAcked: 2, DelayTime: 232µs, ECT0: 28, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [26 27 28]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 9.137ms (σ: 12.059ms), send time: 2024-10-12 12:52:29.032496865 +0800 CST m=+2.026099575, receive time: 2024-10-12 12:52:29.035183331 +0800 CST m=+2.028786041
+2024/10/12 12:52:29 client -> Sending packet 45 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 45, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 51200, Data length: 1024, Offset + Data length: 52224}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 46 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 46, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 52224, Data length: 1024, Offset + Data length: 53248}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 9.137ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 18 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 18, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 30, LowestAcked: 2, DelayTime: 160µs, ECT0: 30, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [29 30]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 8.3ms (σ: 10.717ms), send time: 2024-10-12 12:52:29.032821186 +0800 CST m=+2.026423996, receive time: 2024-10-12 12:52:29.035423646 +0800 CST m=+2.029026456
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 47 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 47, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 53248, Data length: 1024, Offset + Data length: 54272}
+2024/10/12 12:52:29 client -> Sending packet 48 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 48, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 54272, Data length: 1024, Offset + Data length: 55296}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 8.3ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 49 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 49, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 55296, Data length: 1024, Offset + Data length: 56320}
+2024/10/12 12:52:29 client -> Sending packet 50 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 50, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 56320, Data length: 1024, Offset + Data length: 57344}
+2024/10/12 12:52:29 client -> Sending packet 51 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 51, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 57344, Data length: 1024, Offset + Data length: 58368}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 8.3ms
+2024/10/12 12:52:29 client -> Sending packet 19 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 19, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 58368, Data length: 1024, Offset + Data length: 59392}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 19 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 19, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 33, LowestAcked: 2, DelayTime: 160µs, ECT0: 33, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [31 32 33]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.577ms (σ: 9.483ms), send time: 2024-10-12 12:52:29.033471825 +0800 CST m=+2.027074436, receive time: 2024-10-12 12:52:29.03614879 +0800 CST m=+2.029751501
+2024/10/12 12:52:29 client -> Sending packet 52 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 52, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 59392, Data length: 1024, Offset + Data length: 60416}
+2024/10/12 12:52:29 client -> Sending packet 53 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 53, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 60416, Data length: 1024, Offset + Data length: 61440}
+2024/10/12 12:52:29 client -> Sending packet 54 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 54, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 61440, Data length: 1024, Offset + Data length: 62464}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.577ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 55 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 55, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 62464, Data length: 1024, Offset + Data length: 63488}
+2024/10/12 12:52:29 client -> Sending packet 56 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 56, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 63488, Data length: 1024, Offset + Data length: 64512}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.577ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 20 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 20, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 36, LowestAcked: 2, DelayTime: 216µs, ECT0: 36, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [34 35 36]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.085ms (σ: 8.094ms), send time: 2024-10-12 12:52:29.033471825 +0800 CST m=+2.027074436, receive time: 2024-10-12 12:52:29.037335664 +0800 CST m=+2.030938574
+2024/10/12 12:52:29 client -> Sending packet 57 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 57, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 64512, Data length: 1024, Offset + Data length: 65536}
+2024/10/12 12:52:29 client -> Sending packet 58 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 58, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 65536, Data length: 1024, Offset + Data length: 66560}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.085ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 59 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 59, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 66560, Data length: 1024, Offset + Data length: 67584}
+2024/10/12 12:52:29 client -> Sending packet 60 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 60, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 67584, Data length: 1024, Offset + Data length: 68608}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.085ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 61 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 61, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 68608, Data length: 1024, Offset + Data length: 69632}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.085ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 21 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 21, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 39, LowestAcked: 2, DelayTime: 112µs, ECT0: 39, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [37 38 39]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.717ms (σ: 6.806ms), send time: 2024-10-12 12:52:29.03386915 +0800 CST m=+2.027471860, receive time: 2024-10-12 12:52:29.038122812 +0800 CST m=+2.031725622
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 62 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 62, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 69632, Data length: 1024, Offset + Data length: 70656}
+2024/10/12 12:52:29 client -> Sending packet 63 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 63, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 70656, Data length: 1024, Offset + Data length: 71680}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.717ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 64 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 64, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 71680, Data length: 1024, Offset + Data length: 72704}
+2024/10/12 12:52:29 client -> Sending packet 65 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 65, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 72704, Data length: 1024, Offset + Data length: 73728}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.717ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 22 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 22, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 41, LowestAcked: 2, DelayTime: 176µs, ECT0: 41, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [40 41]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.425ms (σ: 5.686ms), send time: 2024-10-12 12:52:29.034171968 +0800 CST m=+2.027774579, receive time: 2024-10-12 12:52:29.03873525 +0800 CST m=+2.032338060
+2024/10/12 12:52:29 client -> Sending packet 66 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 66, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 73728, Data length: 1024, Offset + Data length: 74752}
+2024/10/12 12:52:29 client -> Sending packet 67 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 67, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 74752, Data length: 1024, Offset + Data length: 75776}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.425ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 68 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 68, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 75776, Data length: 1024, Offset + Data length: 76800}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.425ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 23 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 23, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 43, LowestAcked: 2, DelayTime: 152µs, ECT0: 43, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [42 43]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.188ms (σ: 4.737ms), send time: 2024-10-12 12:52:29.034476887 +0800 CST m=+2.028079598, receive time: 2024-10-12 12:52:29.039161176 +0800 CST m=+2.032763986
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 69 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 69, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 76800, Data length: 1024, Offset + Data length: 77824}
+2024/10/12 12:52:29 client -> Sending packet 70 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 70, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 77824, Data length: 1024, Offset + Data length: 78848}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.188ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 71 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 71, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 78848, Data length: 1024, Offset + Data length: 79872}
+2024/10/12 12:52:29 client -> Sending packet 72 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 72, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 79872, Data length: 1024, Offset + Data length: 80896}
+2024/10/12 12:52:29 client -> Sending packet 73 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 73, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 80896, Data length: 1024, Offset + Data length: 81920}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.188ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 24 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 24, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 45, LowestAcked: 2, DelayTime: 208µs, ECT0: 45, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [44 45]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 5.949ms (σ: 4.029ms), send time: 2024-10-12 12:52:29.035383243 +0800 CST m=+2.028986053, receive time: 2024-10-12 12:52:29.039848918 +0800 CST m=+2.033473530
+2024/10/12 12:52:29 client -> Sending packet 74 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 74, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 81920, Data length: 1024, Offset + Data length: 82944}
+2024/10/12 12:52:29 client -> Sending packet 75 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 75, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 82944, Data length: 1024, Offset + Data length: 83968}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.949ms
+2024/10/12 12:52:29 client -> Sending packet 20 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 20, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 83968, Data length: 1024, Offset + Data length: 84992}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 76 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 76, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 84992, Data length: 1024, Offset + Data length: 86016}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.949ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 25 (32 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 25, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 48, LowestAcked: 2, DelayTime: 128µs, ECT0: 48, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [46 47 48]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 5.812ms (σ: 3.294ms), send time: 2024-10-12 12:52:29.03565926 +0800 CST m=+2.029261871, receive time: 2024-10-12 12:52:29.040644868 +0800 CST m=+2.034247578
+2024/10/12 12:52:29 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:29 client -> Sending packet 77 (1061 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 77, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.AckFrame{LargestAcked: 25, LowestAcked: 11, DelayTime: 200.712µs, ECT0: 25, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 86016, Data length: 1024, Offset + Data length: 87040}
+2024/10/12 12:52:29 client -> Sending packet 78 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 78, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 87040, Data length: 1024, Offset + Data length: 88064}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.812ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Initiating key update to key phase 1
+2024/10/12 12:52:29 client -> Sending packet 79 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 79, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 88064, Data length: 1024, Offset + Data length: 89088}
+2024/10/12 12:52:29 client -> Sending packet 80 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 80, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 89088, Data length: 1024, Offset + Data length: 90112}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.812ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 81 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 81, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 90112, Data length: 1024, Offset + Data length: 91136}
+2024/10/12 12:52:29 client -> Sending packet 82 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 82, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 91136, Data length: 1024, Offset + Data length: 92160}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 83 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 83, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 92160, Data length: 1024, Offset + Data length: 93184}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.812ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 26 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 26, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 51, LowestAcked: 2, DelayTime: 160µs, ECT0: 51, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [49 50 51]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 5.774ms (σ: 2.545ms), send time: 2024-10-12 12:52:29.035882474 +0800 CST m=+2.029485084, receive time: 2024-10-12 12:52:29.041555424 +0800 CST m=+2.035158034
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 84 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 84, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 93184, Data length: 1024, Offset + Data length: 94208}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.774ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 85 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 85, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 94208, Data length: 1024, Offset + Data length: 95232}
+2024/10/12 12:52:29 client -> Sending packet 86 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 86, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 95232, Data length: 1024, Offset + Data length: 96256}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.774ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 27 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 27, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 53, LowestAcked: 2, DelayTime: 128µs, ECT0: 53, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [52 53]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 5.751ms (σ: 1.954ms), send time: 2024-10-12 12:52:29.036373704 +0800 CST m=+2.029976515, receive time: 2024-10-12 12:52:29.042094757 +0800 CST m=+2.035697467
+2024/10/12 12:52:29 client -> Sending packet 87 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 87, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 96256, Data length: 1024, Offset + Data length: 97280}
+2024/10/12 12:52:29 client -> Sending packet 88 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 88, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 97280, Data length: 1024, Offset + Data length: 98304}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 89 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 89, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 98304, Data length: 1024, Offset + Data length: 99328}
+2024/10/12 12:52:29 client -> Sending packet 90 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 90, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 99328, Data length: 1024, Offset + Data length: 100352}
+2024/10/12 12:52:29 client -> Sending packet 91 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 91, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 100352, Data length: 1024, Offset + Data length: 101376}
+2024/10/12 12:52:29 client -> Sending packet 92 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 92, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 101376, Data length: 1024, Offset + Data length: 102400}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 93 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 93, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 102400, Data length: 1024, Offset + Data length: 103424}
+2024/10/12 12:52:29 client -> Sending packet 94 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 94, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 103424, Data length: 1024, Offset + Data length: 104448}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 95 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 95, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 104448, Data length: 1024, Offset + Data length: 105472}
+2024/10/12 12:52:29 client -> Sending packet 96 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 96, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 105472, Data length: 1024, Offset + Data length: 106496}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 97 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 97, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 106496, Data length: 1024, Offset + Data length: 107520}
+2024/10/12 12:52:29 client -> Sending packet 98 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 98, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 107520, Data length: 1024, Offset + Data length: 108544}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 99 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 99, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 108544, Data length: 1024, Offset + Data length: 109568}
+2024/10/12 12:52:29 client -> Sending packet 100 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 100, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 109568, Data length: 1024, Offset + Data length: 110592}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 101 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 101, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 110592, Data length: 1024, Offset + Data length: 111616}
+2024/10/12 12:52:29 client -> Sending packet 102 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 102, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 111616, Data length: 1024, Offset + Data length: 112640}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 103 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 103, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 112640, Data length: 1024, Offset + Data length: 113664}
+2024/10/12 12:52:29 client -> Sending packet 104 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 104, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 113664, Data length: 1024, Offset + Data length: 114688}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 105 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 105, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 114688, Data length: 1024, Offset + Data length: 115712}
+2024/10/12 12:52:29 client -> Sending packet 106 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 106, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 115712, Data length: 1024, Offset + Data length: 116736}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 107 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 107, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 116736, Data length: 1024, Offset + Data length: 117760}
+2024/10/12 12:52:29 client -> Sending packet 108 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 108, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 117760, Data length: 1024, Offset + Data length: 118784}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 5.751ms
+2024/10/12 12:52:29 client -> Sending packet 21 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 21, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 118784, Data length: 1024, Offset + Data length: 119808}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 28 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 28, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 56, LowestAcked: 2, DelayTime: 120µs, ECT0: 56, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [54 55 56]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.035ms (σ: 2.033ms), send time: 2024-10-12 12:52:29.036661722 +0800 CST m=+2.030264433, receive time: 2024-10-12 12:52:29.044805624 +0800 CST m=+2.038408334
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 29 (31 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 29, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 61, LowestAcked: 2, DelayTime: 176µs, ECT0: 61, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (5): [57 58 59 60 61]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.31ms (σ: 2.076ms), send time: 2024-10-12 12:52:29.038115712 +0800 CST m=+2.031718522, receive time: 2024-10-12 12:52:29.046531031 +0800 CST m=+2.040135041
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 30 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 30, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 64, LowestAcked: 2, DelayTime: 144µs, ECT0: 64, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [62 63 64]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.504ms (σ: 1.945ms), send time: 2024-10-12 12:52:29.038589541 +0800 CST m=+2.032192251, receive time: 2024-10-12 12:52:29.046594835 +0800 CST m=+2.040201945
+2024/10/12 12:52:29 client -> Sending packet 109 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 109, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 119808, Data length: 1024, Offset + Data length: 120832}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.504ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 31 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 31, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 66, LowestAcked: 2, DelayTime: 168µs, ECT0: 66, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [65 66]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.63ms (σ: 1.71ms), send time: 2024-10-12 12:52:29.038950063 +0800 CST m=+2.032552874, receive time: 2024-10-12 12:52:29.046629937 +0800 CST m=+2.040233747
+2024/10/12 12:52:29 client -> Sending packet 110 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 110, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 120832, Data length: 1024, Offset + Data length: 121856}
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 111 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 111, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 121856, Data length: 1024, Offset + Data length: 122880}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.63ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 32 (35 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 32, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 69, LowestAcked: 2, DelayTime: 608µs, ECT0: 69, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [67 68 69]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.726ms (σ: 1.475ms), send time: 2024-10-12 12:52:29.039482196 +0800 CST m=+2.033084806, receive time: 2024-10-12 12:52:29.04749119 +0800 CST m=+2.041094100
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client -> Sending packet 112 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 112, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 122880, Data length: 1024, Offset + Data length: 123904}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.726ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 113 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 113, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 123904, Data length: 1024, Offset + Data length: 124928}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.726ms
+2024/10/12 12:52:29 client -> Sending packet 22 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 22, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 124928, Data length: 1024, Offset + Data length: 125952}
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 33 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 33, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 72, LowestAcked: 2, DelayTime: 112µs, ECT0: 72, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [70 71 72]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 6.873ms (σ: 1.401ms), send time: 2024-10-12 12:52:29.039677808 +0800 CST m=+2.033280518, receive time: 2024-10-12 12:52:29.047695402 +0800 CST m=+2.041298413
+2024/10/12 12:52:29 client -> Sending packet 114 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 114, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 125952, Data length: 1024, Offset + Data length: 126976}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 6.873ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 34 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 34, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 75, LowestAcked: 2, DelayTime: 168µs, ECT0: 75, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [73 74 75]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.07ms (σ: 1.445ms), send time: 2024-10-12 12:52:29.040048431 +0800 CST m=+2.033651141, receive time: 2024-10-12 12:52:29.048668162 +0800 CST m=+2.042270973
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 35 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 35, PacketNumberLen: 2, KeyPhase: 0}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 78, LowestAcked: 49, DelayTime: 216µs, ECT0: 78, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [76 77 78]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.257ms (σ: 1.459ms), send time: 2024-10-12 12:52:29.04083628 +0800 CST m=+2.034438990, receive time: 2024-10-12 12:52:29.049624121 +0800 CST m=+2.043226831
+2024/10/12 12:52:29 client 	Ignoring all packets below 26.
+2024/10/12 12:52:29 client -> Sending packet 115 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 115, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 126976, Data length: 1024, Offset + Data length: 128000}
+2024/10/12 12:52:29 client -> Sending packet 116 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 116, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 128000, Data length: 1024, Offset + Data length: 129024}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.257ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 client -> Sending packet 117 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 117, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 129024, Data length: 1024, Offset + Data length: 130048}
+2024/10/12 12:52:29 client -> Sending packet 118 (1053 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 118, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.StreamFrame{StreamID: 0, Fin: false, Offset: 130048, Data length: 1024, Offset + Data length: 131072}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.257ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client Peer confirmed key update to phase 1
+2024/10/12 12:52:29 client Starting key drop timer to drop key phase 0 (in 600ms)
+2024/10/12 12:52:29 client <- Reading packet 36 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 36, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 81, LowestAcked: 49, DelayTime: 200µs, ECT0: 81, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [79 80 81]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.438ms (σ: 1.456ms), send time: 2024-10-12 12:52:29.041436317 +0800 CST m=+2.035039027, receive time: 2024-10-12 12:52:29.050343666 +0800 CST m=+2.043946376
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.438ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 37 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 37, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 84, LowestAcked: 49, DelayTime: 176µs, ECT0: 84, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [82 83 84]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.657ms (σ: 1.53ms), send time: 2024-10-12 12:52:29.041775237 +0800 CST m=+2.035377847, receive time: 2024-10-12 12:52:29.051141915 +0800 CST m=+2.044744625
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 38 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 38, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 86, LowestAcked: 49, DelayTime: 176µs, ECT0: 86, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [85 86]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 7.907ms (σ: 1.649ms), send time: 2024-10-12 12:52:29.041950948 +0800 CST m=+2.035553658, receive time: 2024-10-12 12:52:29.051790854 +0800 CST m=+2.045393565
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 7.907ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 39 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 39, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 88, LowestAcked: 49, DelayTime: 192µs, ECT0: 88, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [87 88]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 8.175ms (σ: 1.773ms), send time: 2024-10-12 12:52:29.042269068 +0800 CST m=+2.035871778, receive time: 2024-10-12 12:52:29.052514999 +0800 CST m=+2.046117910
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 40 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 40, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 90, LowestAcked: 49, DelayTime: 200µs, ECT0: 90, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [89 90]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 8.445ms (σ: 1.871ms), send time: 2024-10-12 12:52:29.04246098 +0800 CST m=+2.036063690, receive time: 2024-10-12 12:52:29.053002329 +0800 CST m=+2.046605140
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 8.445ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 41 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 41, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 93, LowestAcked: 49, DelayTime: 216µs, ECT0: 93, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [91 92 93]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 8.757ms (σ: 2.027ms), send time: 2024-10-12 12:52:29.042779299 +0800 CST m=+2.036382310, receive time: 2024-10-12 12:52:29.053938987 +0800 CST m=+2.047541697
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 42 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 42, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 95, LowestAcked: 49, DelayTime: 168µs, ECT0: 95, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [94 95]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 9.068ms (σ: 2.142ms), send time: 2024-10-12 12:52:29.043088918 +0800 CST m=+2.036691629, receive time: 2024-10-12 12:52:29.054503722 +0800 CST m=+2.048106532
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 9.068ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 43 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 43, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 97, LowestAcked: 49, DelayTime: 184µs, ECT0: 97, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [96 97]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 9.344ms (σ: 2.159ms), send time: 2024-10-12 12:52:29.04344374 +0800 CST m=+2.037046350, receive time: 2024-10-12 12:52:29.054909047 +0800 CST m=+2.048511757
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 44 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 44, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 99, LowestAcked: 49, DelayTime: 136µs, ECT0: 99, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [98 99]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 9.623ms (σ: 2.177ms), send time: 2024-10-12 12:52:29.043719057 +0800 CST m=+2.037321767, receive time: 2024-10-12 12:52:29.055432079 +0800 CST m=+2.049034789
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 9.623ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 45 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 45, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 102, LowestAcked: 49, DelayTime: 184µs, ECT0: 102, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (3): [100 101 102]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 9.956ms (σ: 2.299ms), send time: 2024-10-12 12:52:29.043988374 +0800 CST m=+2.037591084, receive time: 2024-10-12 12:52:29.056462443 +0800 CST m=+2.050065153
+2024/10/12 12:52:29 client 	<- &wire.PingFrame{}
+2024/10/12 12:52:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 46 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 46, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 104, LowestAcked: 49, DelayTime: 128µs, ECT0: 104, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [103 104]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.276ms (σ: 2.365ms), send time: 2024-10-12 12:52:29.044293892 +0800 CST m=+2.037896603, receive time: 2024-10-12 12:52:29.056943672 +0800 CST m=+2.050546383
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.276ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 47 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 47, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 106, LowestAcked: 49, DelayTime: 176µs, ECT0: 106, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [105 106]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.646ms (σ: 2.513ms), send time: 2024-10-12 12:52:29.044556209 +0800 CST m=+2.038159019, receive time: 2024-10-12 12:52:29.057968336 +0800 CST m=+2.051571146
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 48 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 48, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 108, LowestAcked: 49, DelayTime: 184µs, ECT0: 108, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [107 108]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.794ms (σ: 2.182ms), send time: 2024-10-12 12:52:29.046044 +0800 CST m=+2.039646711, receive time: 2024-10-12 12:52:29.058065242 +0800 CST m=+2.051668252
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 49 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 49, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 110, LowestAcked: 49, DelayTime: 192µs, ECT0: 110, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [109 110]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.85ms (σ: 1.749ms), send time: 2024-10-12 12:52:29.047430686 +0800 CST m=+2.041033396, receive time: 2024-10-12 12:52:29.05885909 +0800 CST m=+2.052470001
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.85ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 50 (33 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 50, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 112, LowestAcked: 49, DelayTime: 168µs, ECT0: 112, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [111 112]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.932ms (σ: 1.476ms), send time: 2024-10-12 12:52:29.047709303 +0800 CST m=+2.041312213, receive time: 2024-10-12 12:52:29.059384123 +0800 CST m=+2.052987233
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 51 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 51, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 114, LowestAcked: 49, DelayTime: 176µs, ECT0: 114, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [113 114]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.865ms (σ: 1.24ms), send time: 2024-10-12 12:52:29.049329503 +0800 CST m=+2.042932213, receive time: 2024-10-12 12:52:29.059903755 +0800 CST m=+2.053506465
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.865ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 52 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 52, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 116, LowestAcked: 49, DelayTime: 176µs, ECT0: 116, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [115 116]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.844ms (σ: 970µs), send time: 2024-10-12 12:52:29.049787831 +0800 CST m=+2.043390541, receive time: 2024-10-12 12:52:29.060665602 +0800 CST m=+2.054268512
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 203.42ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 53 (34 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 53, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 118, LowestAcked: 49, DelayTime: 144µs, ECT0: 118, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [117 118]
+2024/10/12 12:52:29 client 	updated RTT for path 0: 10.831ms (σ: 752µs), send time: 2024-10-12 12:52:29.050069348 +0800 CST m=+2.043671959, receive time: 2024-10-12 12:52:29.06095842 +0800 CST m=+2.054561230
+2024/10/12 12:52:29 client Canceling loss detection timer. No packets in flight.
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.831ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client Peer confirmed key update to phase 1
+2024/10/12 12:52:29 client Starting key drop timer to drop key phase 0 (in 600ms)
+2024/10/12 12:52:29 client <- Reading packet 6 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 6, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 6, LowestAcked: 2, DelayTime: 256µs, ECT0: 7, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [5 6]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 190.686ms (σ: 108.142ms), send time: 2024-10-12 12:52:29.025459932 +0800 CST m=+2.019062742, receive time: 2024-10-12 12:52:29.127008492 +0800 CST m=+2.120611302
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 190.686ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 7 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 7, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 8, LowestAcked: 2, DelayTime: 144µs, ECT0: 9, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [7 8]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 179.554ms (σ: 103.37ms), send time: 2024-10-12 12:52:29.025712547 +0800 CST m=+2.019315357, receive time: 2024-10-12 12:52:29.127487021 +0800 CST m=+2.121089731
+2024/10/12 12:52:29 client Sending ACK because the ACK timer expired.
+2024/10/12 12:52:29 client -> Sending packet 119 (32 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 119, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	-> &wire.AckFrame{LargestAcked: 53, LowestAcked: 26, DelayTime: 66.706012ms, ECT0: 53, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.831ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 8 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 8, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 12, LowestAcked: 2, DelayTime: 264µs, ECT0: 13, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (4): [9 10 11 12]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 169.929ms (σ: 96.775ms), send time: 2024-10-12 12:52:29.025950962 +0800 CST m=+2.019553772, receive time: 2024-10-12 12:52:29.128776201 +0800 CST m=+2.122378910
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 169.929ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 9 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 9, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 16, LowestAcked: 2, DelayTime: 352µs, ECT0: 17, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (4): [13 14 15 16]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 161.585ms (σ: 89.269ms), send time: 2024-10-12 12:52:29.026513396 +0800 CST m=+2.020116107, receive time: 2024-10-12 12:52:29.130043279 +0800 CST m=+2.123645889
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.831ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 10 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 10, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 18, LowestAcked: 2, DelayTime: 168µs, ECT0: 19, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [17 18]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 154.077ms (σ: 81.966ms), send time: 2024-10-12 12:52:29.03274128 +0800 CST m=+2.026343891, receive time: 2024-10-12 12:52:29.134266139 +0800 CST m=+2.127868949
+2024/10/12 12:52:29 client 	Ignoring all packets below 6.
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 154.077ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 11 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 11, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 20, LowestAcked: 2, DelayTime: 184µs, ECT0: 21, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [19 20]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 147.484ms (σ: 74.659ms), send time: 2024-10-12 12:52:29.040281545 +0800 CST m=+2.033884355, receive time: 2024-10-12 12:52:29.141616892 +0800 CST m=+2.135219703
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.831ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 17d7dae8
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 12 (31 bytes) for connection 17d7dae8, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 17d7dae8, PacketNumber: 12, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.AckFrame{LargestAcked: 22, LowestAcked: 2, DelayTime: 208µs, ECT0: 23, ECT1: 0, CE: 0}
+2024/10/12 12:52:29 client 	newly acked packets (2): [21 22]
+2024/10/12 12:52:29 client 	updated RTT for path 1: 141.732ms (σ: 67.497ms), send time: 2024-10-12 12:52:29.04911429 +0800 CST m=+2.042717000, receive time: 2024-10-12 12:52:29.150585845 +0800 CST m=+2.144188655
+2024/10/12 12:52:29 client Canceling loss detection timer. No packets in flight.
+2024/10/12 12:52:29 client Select path 1 by ROUND_ROBIN, rtt 141.732ms
+2024/10/12 12:52:29 received a packet from 10.0.0.1:6666 and handle it in connection 5cdc9281
+2024/10/12 12:52:29 client Received a packet from 10.0.0.1:6666
+2024/10/12 12:52:29 client <- Reading packet 54 (29 bytes) for connection 5cdc9281, 1-RTT
+2024/10/12 12:52:29 client 	Short Header{DestConnectionID: 5cdc9281, PacketNumber: 54, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:29 client 	<- &wire.MaxStreamDataFrame{StreamID: 0, MaximumStreamData: 655360}
+2024/10/12 12:52:29 client 	Setting ACK timer to max ack delay: 25ms
+2024/10/12 12:52:29 client Select path 0 by ROUND_ROBIN, rtt 10.831ms
+2024/10/12 12:52:31 Tracking 4 connection IDs and 1 reset tokens.
+2024/10/12 12:52:32 Removing connection ID 7fc7de10 after it has been retired.
+2024/10/12 12:52:33 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/12 12:52:35 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/12 12:52:37 Tracking 3 connection IDs and 1 reset tokens.
+2024/10/12 12:52:37 client Closing connection with error: Application error 0x0 (local)
+2024/10/12 12:52:37 client -> Sending packet 23 (1430 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:37 client 	Short Header{DestConnectionID: e8af2e90, PacketNumber: 23, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:37 client 	-> &wire.PingFrame{}
+2024/10/12 12:52:37 client Select path 1 by ROUND_ROBIN, rtt 141.732ms
+2024/10/12 12:52:37 client Path 0 has closed
+2024/10/12 12:52:37 client Path 1 has closed
+2024/10/12 12:52:37 client -> Sending packet 120 (26 bytes) for connection 4625f10da3c07b684efcef, 1-RTT (ECN: ECT(0))
+2024/10/12 12:52:37 client 	Short Header{DestConnectionID: e4b5db28, PacketNumber: 120, PacketNumberLen: 2, KeyPhase: 1}
+2024/10/12 12:52:37 client 	-> &wire.ConnectionCloseFrame{IsApplicationError:true, ErrorCode:0x0, FrameType:0x0, ReasonPhrase:""}
+2024/10/12 12:52:37 Replacing connection for connection IDs [5cdc9281 e83f8f23 17d7dae8] with a closed connection.
+2024/10/12 12:52:37 client Connection 4625f10da3c07b684efcef closed.
