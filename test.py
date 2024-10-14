@@ -57,10 +57,10 @@ def createNetwork():
 
     host0 = net.get("h0")
     host0.setIP('10.0.0.3/24', intf='h0-eth0')
-    runCmd(host0, 'sudo sysctl net.ipv4.ip_forward=1')
+    runCmd(host0, 'sysctl net.ipv4.ip_forward=1')
 
     host1 = net.get("h1")
-    runCmd(host1, 'sudo sysctl net.ipv4.ip_forward=1')
+    runCmd(host1, 'sysctl net.ipv4.ip_forward=1')
     host1.setIP('10.0.0.1/24', intf='h1-eth0')
     host1.setIP('10.0.0.2/24', intf='h1-eth1')
 

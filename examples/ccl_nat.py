@@ -75,7 +75,7 @@ def createNetwork():
     net = Mininet(topo=topo, waitConnected=True, link=TCLink)
 
     host1 = net.get("h1")
-    runCmd(host1, 'sudo sysctl net.ipv4.ip_forward=1')
+    runCmd(host1, 'sysctl net.ipv4.ip_forward=1')
        
     for i in irange(1, 2):
         hostIPs = '192.168.%d.100/24' % i
@@ -93,14 +93,14 @@ def createNetwork():
 
     net.start()
 
-    runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 1ms rate 30mbit")
-    runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 100ms rate 30mbit")
+    runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 1ms rate 10mbit")
+    runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 100ms rate 10mbit")
 
     runCmd(host1, "tc qdisc show dev h1-eth0")
     runCmd(host1, "tc qdisc show dev h1-eth1")
 
     host0 = net.getNodeByName('h0')
-    runCmd(host0, "tc qdisc add dev h0-eth0 root handle 3: netem rate 30mbit")
+    runCmd(host0, "tc qdisc add dev h0-eth0 root handle 3: netem rate 10mbit")
 
     thread1 = threading.Thread(target=runCmd, args=(host0, '/home/ccl/mpquic-go/server'))
     thread2 = threading.Thread(target=runCmd, args=(host1, '/home/ccl/mpquic-go/client'))
