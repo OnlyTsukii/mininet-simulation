@@ -1,5 +1,6 @@
 import time
 import threading
+import os
 
 from mininet.topo import Topo
 from mininet.net import Mininet
@@ -10,6 +11,10 @@ from mininet.util import irange
 from mininet.nodelib import NAT
 
 """
+             ens37
+               |
+              s00
+               |
                h0
                |
                s0
@@ -52,6 +57,9 @@ def createNetwork():
 
     h0 = topo.addHost('h0')
 
+    s00 = topo.addSwitch('s00')
+    topo.addLink(h0, s00)
+
     s0 = topo.addSwitch('s0')
     topo.addLink(h0, s0)
 
@@ -74,16 +82,22 @@ def createNetwork():
 
     net = Mininet(topo=topo, waitConnected=True, link=TCLink)
 
+    host0 = net.get('h0')
+    host0.setIP('10.0.0.1/24', intf='h0-eth1')
+
     host1 = net.get("h1")
-    runCmd(host1, 'sysctl net.ipv4.ip_forward=1')
+    runCmd(host1, 'sudo sysctl net.ipv4.ip_forward=1')
        
     for i in irange(1, 2):
         hostIPs = '192.168.%d.100/24' % i
         hostIP = '192.168.%d.100' % i
         hostIntf = 'h1-eth%d' % int(i-1)
+
         hostGateway = '192.168.%d.1' % i
         hostSubnet = '192.168.%d.0/24' % i
         hostTableName = 'gateway%d' % i
+
+        natIPHost0 = '10.0.0.%d' % int(i+2)
 
         host1.setIP(hostIPs, intf=hostIntf)
 
@@ -91,28 +105,34 @@ def createNetwork():
         runCmd(host1, f'ip route add 10.0.0.0/24 via {hostGateway} dev {hostIntf} table {hostTableName}')
         runCmd(host1, f'ip rule add from {hostIP} table {hostTableName}')
 
+        runCmd(host0, f'ip route add {hostSubnet} via {natIPHost0} dev h0-eth1')
+
     net.start()
 
-    runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 1ms rate 10mbit")
-    runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 100ms rate 10mbit")
+    os.popen('ifconfig ens37 0.0.0.0')
+    os.popen('ovs-vsctl add-port s00 ens37')
 
-    runCmd(host1, "tc qdisc show dev h1-eth0")
-    runCmd(host1, "tc qdisc show dev h1-eth1")
+    runCmd(host0, 'dhclient h0-eth0')
 
-    host0 = net.getNodeByName('h0')
-    runCmd(host0, "tc qdisc add dev h0-eth0 root handle 3: netem rate 10mbit")
+    # runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 1ms rate 10mbit")
+    # runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 100ms rate 10mbit")
 
-    thread1 = threading.Thread(target=runCmd, args=(host0, '/home/ccl/mpquic-go/server'))
-    thread2 = threading.Thread(target=runCmd, args=(host1, '/home/ccl/mpquic-go/client'))
+    # runCmd(host1, "tc qdisc show dev h1-eth0")
+    # runCmd(host1, "tc qdisc show dev h1-eth1")
 
-    thread1.start()
-    time.sleep(3)
-    thread2.start()
+    # runCmd(host0, "tc qdisc add dev h0-eth0 root handle 3: netem rate 10mbit")
 
-    thread1.join()
-    thread2.join()
+    # thread1 = threading.Thread(target=runCmd, args=(host0, '/home/ccl/mpquic-go/server'))
+    # thread2 = threading.Thread(target=runCmd, args=(host1, '/home/ccl/mpquic-go/client'))
 
-    # CLI(net)
+    # thread1.start()
+    # time.sleep(3)
+    # thread2.start()
+
+    # thread1.join()
+    # thread2.join()
+
+    CLI(net)
 
     net.stop()
 
