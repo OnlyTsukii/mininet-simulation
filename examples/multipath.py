@@ -11,10 +11,6 @@ from mininet.util import irange
 from mininet.nodelib import NAT
 
 """
-             ens37
-               |
-              s00
-               |
                h0
                |
                s0
@@ -57,9 +53,6 @@ def createNetwork():
 
     h0 = topo.addHost('h0')
 
-    s00 = topo.addSwitch('s00')
-    topo.addLink(h0, s00)
-
     s0 = topo.addSwitch('s0')
     topo.addLink(h0, s0)
 
@@ -77,16 +70,18 @@ def createNetwork():
        
         topo.addLink(nat, s0, intfName1=inetIntf)
         topo.addLink(nat, switch, intfName1=localIntf, params1=natParams)
-      
-        topo.addLink(h1, switch)
+
+        if i == 1:
+            topo.addLink(h1, switch, bw=10, delay='10ms')
+        else:
+            topo.addLink(h1, switch, bw=50, delay='50ms')
 
     net = Mininet(topo=topo, waitConnected=True, link=TCLink)
 
     host0 = net.get('h0')
-    host0.setIP('10.0.0.1/24', intf='h0-eth1')
+    host0.setIP('10.0.0.1/24', intf='h0-eth0')
 
     host1 = net.get("h1")
-    runCmd(host1, 'sudo sysctl net.ipv4.ip_forward=1')
        
     for i in irange(1, 2):
         hostIPs = '192.168.%d.100/24' % i
@@ -96,26 +91,29 @@ def createNetwork():
         hostGateway = '192.168.%d.1' % i
         hostSubnet = '192.168.%d.0/24' % i
         hostTableName = 'gateway%d' % i
-
+        
+        natHost = net.get('nat%d' % i)
+        runCmd(natHost, 'sudo sysctl net.ipv4.ip_forward=1')
         natIPHost0 = '10.0.0.%d' % int(i+2)
 
         host1.setIP(hostIPs, intf=hostIntf)
+
+        # runCmd(host1, f'ip route add {hostSubnet} dev {hostIntf} table {hostTableName}')
+        # runCmd(host1, f'ip route add default via {hostGateway} table {hostTableName}')
+        # runCmd(host1, f'ip rule add from {hostIP} lookup {hostTableName}')
 
         runCmd(host1, f'route add default gw {hostGateway}')
         runCmd(host1, f'ip route add 10.0.0.0/24 via {hostGateway} dev {hostIntf} table {hostTableName}')
         runCmd(host1, f'ip rule add from {hostIP} table {hostTableName}')
 
-        runCmd(host0, f'ip route add {hostSubnet} via {natIPHost0} dev h0-eth1')
+        runCmd(host0, f'ip route add {hostSubnet} via {natIPHost0} dev h0-eth0')
 
     net.start()
 
-    os.popen('ifconfig ens37 0.0.0.0')
-    os.popen('ovs-vsctl add-port s00 ens37')
-
-    runCmd(host0, 'dhclient h0-eth0')
-
-    # runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 1ms rate 10mbit")
-    # runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 100ms rate 10mbit")
+    # runCmd(host1, "tc qdisc replace dev h1-eth0 root handle 1: netem delay 10ms rate 10mbit")
+    # runCmd(host1, "tc qdisc replace dev h1-eth1 root handle 2: netem delay 50ms rate 50mbit")
+    # runCmd(host1, "tc qdisc replace dev nat1-eth0 root handle 1: netem delay 10ms rate 10mbit")
+    # runCmd(host1, "tc qdisc replace dev nat2-eth0 root handle 1: netem delay 50ms rate 50mbit")
 
     # runCmd(host1, "tc qdisc show dev h1-eth0")
     # runCmd(host1, "tc qdisc show dev h1-eth1")
